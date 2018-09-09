@@ -7,6 +7,7 @@ var async = require('async');
 
 var sendMessage = require('./sendMessage.js');
 var messageTemplate = require('./messageTemplate.js');
+
 var pgManager = require('./postgresManager.js'); // データベースを使う時に必要
 
 // utilモジュールを使います。
@@ -101,6 +102,7 @@ function databaseSample(req, sendword) {
     return;
   }
 
+
   // if (words[0] === "add" || words[0] === "追加") {
   //   // 質問取得
   //   pgManager.add_word(words[1], function(result) {
@@ -109,7 +111,8 @@ function databaseSample(req, sendword) {
   //   });
   //   return;
   // }
-  //
+
+
   // if (words[0] === "delete" || words[0] === "削除") {
   //   // 質問取得
   //   pgManager.delete_word(words[1], function(result) {
@@ -118,7 +121,8 @@ function databaseSample(req, sendword) {
   //   });
   //   return;
   // }
-  //
+
+
   // if (words[0] === "list" || words[0] === "リスト") {
   //   // ネタ取得
   //   pgManager.get_words(function(result) {
@@ -138,6 +142,7 @@ function databaseSample(req, sendword) {
   //   });
   //   return;
   // }
+
 
   // ネタ取得
   pgManager.get_words(function(result) {

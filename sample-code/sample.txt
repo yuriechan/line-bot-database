@@ -1,6 +1,7 @@
 ///////////////////
 // 画像で返事をする //
 ///////////////////
+
 var messages = ["左上を押した", "右上を押した", "左下を押した", "右下を押した"];
 if (message_text == "猫") {
    sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/8cbL5dl.jpg') ]);

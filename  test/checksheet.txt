@@ -1,0 +1,43 @@
+Heroku
+https://jp.heroku.com/
+
+Herokuのメールアドレスとパスワード覚えた?
+アプリ作成ok?
+アプリ名を控えてください
+
+---
+
+LINE Developers
+https://developers.line.me/ja/
+
+メッセージ送受信設定 -> アクセストークン 発行した?
+メッセージ送受信設定 -> Webhook送信の設定 ONにした?
+メッセージ送受信設定 -> Webhook URL設定した?
+
+LINE@機能の利用 -> 自動応答メッセージ 利用しないにした?
+LINEアプリへのQRコード -> QRコードをLINEアプリで読み込んでアカウントを友達に追加しよう
+---
+
+codenvyのターミナルで実行するコマンド
+
+# 階層を移動する
+$ cd line-messaging-api
+
+# herokuのコマンドライン
+$ curl https://cli-assets.heroku.com/install.sh | sh
+
+# herokuとLINEの連携
+$ heroku login
+$ heroku git:remote -a [アプリ名]
+$ heroku config:set LINE_CHANNEL_SECRET="[チャンネルシークレット]"
+$ heroku config:set LINE_CHANNEL_ACCESS_TOKEN="[チャンネルアクセストークン]"
+$ git push heroku master
+
+# 一度だけ実行(ユーザー情報のセット)
+$ git config user.name "Your Name"
+$ git config user.email "youremail@example.com"
+
+# プログラムを修正し終わったら、その度に実行する
+$ git add .
+$ git commit -m "update"
+$ git push heroku master
